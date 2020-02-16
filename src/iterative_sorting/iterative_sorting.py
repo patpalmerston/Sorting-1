@@ -29,12 +29,19 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 # needs to be refactored for performance
 def bubble_sort(arr):
+    # outer loop
     for i in range(len(arr)):
+        # pointer starts at the zero index
         left = i
+        # inner loop
         for j in range(i+1, len(arr)):
+            # pointer starts at the second index
             right = j
+            # if the left index is larger than the right = swap
             if arr[right] < arr[left]:
+                # swap
                 arr[right], arr[left] = arr[left], arr[right]
+    # return array
     return arr
 
     '''
