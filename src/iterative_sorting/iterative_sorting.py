@@ -44,6 +44,23 @@ def bubble_sort(arr):
     # return array
     return arr
 
+# using a outer loop in revers and an inner loop going forward:
+
+# def bubble_sort(arr):
+#     for i in range(-1, len(arr)):
+#         # print(arr[i])
+#         right = i
+#         for j in range(len(arr)):
+#             print(arr[i], arr[j])
+#             left = j
+
+#             if arr[left] > arr[right]:
+#             arr[left], arr[right] = arr[right], arr[left]
+#     return arr
+
+# b_list = [4,3,5,9,1,6]
+# print(bubble_sort(b_list))
+
     '''
     with bubble we need two pointers, left index and right index that increment forward together
     left starts at 0 index, right starts at 1
