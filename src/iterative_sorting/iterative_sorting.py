@@ -61,6 +61,28 @@ def bubble_sort(arr):
 # b_list = [4,3,5,9,1,6]
 # print(bubble_sort(b_list))
 
+
+# Insertion sort
+# def insertion_sort(arr):
+#   # sort through the array skipping the first index of zero, as it represents the sorted portion of the array
+#     for i in range(1, len(arr)):
+#         #hold the current index in a varaible
+#         current = arr[i]
+#         #declare a variable j equal to the index of i, and loop backwards off it until it finds a value that is greater than 'current'(unsorted sub array). The sorted array is represented by arr[j-1]
+#         j = i
+#         #while j that is equal to the index of i is greater than zero
+#         # and current(equal to the value of arr[i]) is less than our sorted array arr[j-1]
+#         while j > 0 and current < arr[j-1]:
+#           # then we need to move the value of the sorted array forward
+#           arr[j] = arr[j-1]
+#           # Decrement the J loop back open
+#           j-=1
+#         # now that the j looped back we make our j index equal to the old current value, switching our greater value with the lesser value we found from 'current'
+#         arr[j] = current
+
+
+#     return arr
+
     '''
     with bubble we need two pointers, left index and right index that increment forward together
     left starts at 0 index, right starts at 1
