@@ -63,34 +63,35 @@ def bubble_sort(arr):
 
 
 # Insertion sort
-# def insertion_sort(arr):
-#   # sort through the array skipping the first index of zero, as it represents the sorted portion of the array
-#     for i in range(1, len(arr)):
-#         #hold the current index in a varaible
-#         current = arr[i]
-#         #declare a variable j equal to the index of i, and loop backwards off it until it finds a value that is greater than 'current'(unsorted sub array). The sorted array is represented by arr[j-1]
-#         j = i
-#         #while j that is equal to the index of i is greater than zero
-#         # and current(equal to the value of arr[i]) is less than our sorted array arr[j-1]
-#         while j > 0 and current < arr[j-1]:
-#           # then we need to move the value of the sorted array forward
-#           arr[j] = arr[j-1]
-#           # Decrement the J loop back open
-#           j-=1
-#         # now that the j looped back we make our j index equal to the old current value, switching our greater value with the lesser value we found from 'current'
-#         arr[j] = current
+def insertion_sort(arr):
+    # -insertion sort seperates the array into sorted and unsorted
+    # -do this by looping through the array skipping the initial Value
+    # -that value is the sorted side
+    for i in range(1, len(arr)):
+        # -we will need a variable that is the current value of the looped index
+        # -we will need another variable j equal to the index of the outer loop
+        # -we will bounce off the 'current' variable with j-1 to check the sorted side
+        current = arr[i]
+        j = i
+# -we can only loop the inner loop if the index of j is greater than zero(meaning the index is greater than zero) and only if current is less than the value of the sorted side arr[j-1]
+        while j > 0 and current < arr[j-1]:
+            # -if that is true than we need arr[j] = arr[j-1] / this moves the greater value forward one Index
+            arr[j] = arr[j-1]
+# --then we decrement J so that we will continue to loop backwards to check for greater value vs the value of current, per the conditional in the loop statement
+            j -= 1
+# -in the outer loop scope we then change the current loop index of J to be the current Value which was the lesser value, placeing it before the greater value that was arr[j-1]
+        arr[j] = current
 
-
-#     return arr
-
-    '''
-    with bubble we need two pointers, left index and right index that increment forward together
-    left starts at 0 index, right starts at 1
-    Outer loop starts with our 0 index
-    inner loop starts with our second index
-    as we run the inner loop against the outer loop we check to see if the j index is less than i. if it is then we swap and return arr
+    return arr
 
     '''
+        with bubble we need two pointers, left index and right index that increment forward together
+        left starts at 0 index, right starts at 1
+        Outer loop starts with our 0 index
+        inner loop starts with our second index
+        as we run the inner loop against the outer loop we check to see if the j index is less than i. if it is then we swap and return arr
+
+        '''
 
 
 # STRETCH: implement the Count Sort function below
