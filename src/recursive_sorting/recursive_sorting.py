@@ -49,6 +49,47 @@ def merge_sort(arr):
     # return and sort the recursively seperated arrays
     return merge(left, right)
 
+
+# Version 2
+# def merge(left, right):
+#   # 4 variables, 1 list 3 counters, a counter for each loop, and counter for result list
+
+#   i, j = 0, 0
+#   result = []
+#   #loop until i or j is larger equal to the length of the lists
+#   while i < len(left) and j < len(right):
+#   # if value of left is less than the value of right append the lower value to result
+#     if left[i] < right[j]:
+#       result.append(left[i])
+#       # increment i so we stay within the while loop condition
+#       i+=1
+#   # else the lesser value is on the right
+#     else:
+#       result.append(right[j])
+#       # increment i so we stay within the while loop condition
+#       j+=1
+#   # for any single indexed list default to add them to the end of the list
+#   result += left[i:]
+#   result += right[j:]
+#   # return result
+#   return result
+
+
+# def merge_sort(arr):
+#   #need a Base
+#   if len(arr) <= 1:
+#       return arr
+#   # need to find the min
+#   mid = len(arr) // 2
+#   # slice the beginning
+#   left = merge_sort(arr[:mid])
+#   # slice the end
+#   right = merge_sort(arr[mid:])
+#   # merge with helper function
+#   # print(left, right)
+
+#   return merge(left, right)
+
 # STRETCH: implement an in-place merge sort algorithm
 
 
